@@ -34,15 +34,15 @@ React.useEffect(()=> {
     },
     []);
 
-if (!ready) {return
-<p>Loading...</p>
+if (!ready) {
+    return <p>Loading...</p>
 }else{
     return(
      <div>
        <p> {user.firstName}  {user.lastName}</p>
         <img src = {user.picture}/>
         <br/>
-        <button onClick = {fetchData}>Get User</button>
+        <button onClick = {()=> fetchData()}>Get User</button>
     </div>
     )}};
 
